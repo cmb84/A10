@@ -35,22 +35,22 @@
       return "";
     }
 
-    function checkCookie() {
-      var user = getCookie("username");
+   function checkCookie() {
+      var user = getCookie("user");
       var message = document.getElementById("message");
       var cookieValue = document.getElementById("cookieValue");
 
       if (user !== "") {
-        message.innerHTML = "Welcome again, " + user + "!";
+        message.innerHTML = "Welcome to the page, " + user + "!";
         cookieValue.innerHTML = "document.cookie: " + document.cookie;
       } else {
-        user = prompt("Please enter your name:", "");
+        user = prompt("Please enter your username:", "");
         if (user !== "" && user !== null) {
           setCookie("username", user, 365);
-          message.innerHTML = "Cookie has been set. Reload the page to see it.";
+          message.innerHTML = "The Cookie is set. Reload to see it";
           cookieValue.innerHTML = "";
         } else {
-          message.innerHTML = "No cookie set.";
+          message.innerHTML = "No cookie";
           cookieValue.innerHTML = "";
         }
       }
